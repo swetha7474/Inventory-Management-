@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Warehouse Details</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fa;
+            margin: 0;
+        }
+
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background: #14213d;
+            padding: 20px;
+            position: fixed;
+            color: white;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 12px;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 7px;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover,
+        .sidebar .active {
+            background: #315b9b;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .main {
+            margin-left: 250px;
+            padding: 30px;
+        }
+
+        .details {
+            background: rgb(161, 190, 236);
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 550px;
+        }
+
+        .details p {
+            padding: 10px;
+        }
+
+        .back {
+            color: #315b9b;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>INVENTORY</h2>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="products.html">Products</a>
+        <a href="warehouses.html" class="active">Warehouses</a>
+        <a href="stock.html">Stock Management</a>
+    </div>
+
+    <div class="main">
+
+        <h1>Warehouse Details</h1>
+
+        <div class="details" id="warehouseDetails"></div>
+
+        <br>
+
+        <a href="C:\inventory_warehouse\html\warehouses.html" class="back">
+            ← Back to Warehouses
+        </a>
+
+    </div>
+
+    <script>
+        const warehouses = {
+            WH001: {
+                name: "Main Warehouse",
+                location: "Chennai",
+                manager: "Anand",
+                totalItems: 47,
+                status: "Active"
+            },
+
+            WH002: {
+                name: "Central Warehouse",
+                location: "Coimbatore",
+                manager: "Santhosh",
+                totalItems: 28,
+                status: "Active"
+            },
+
+            WH003: {
+                name: "South Warehouse",
+                location: "Trichy",
+                manager: "Velu",
+                totalItems: 23,
+                status: "Active"
+            }
+        };
+
+        const warehouseId =
+            new URLSearchParams(window.location.search).get("id") || "WH001";
+
+        const warehouse = warehouses[warehouseId];
+
+        const details = document.getElementById("warehouseDetails");
+
+        if (warehouse) {
+            details.innerHTML = `
+            <p><b>Warehouse ID:</b> ${warehouseId}</p>
+            <p><b>Warehouse Name:</b> ${warehouse.name}</p>
+            <p><b>Location:</b> ${warehouse.location}</p>
+            <p><b>Manager:</b> ${warehouse.manager}</p>
+            <p><b>Total Items:</b> ${warehouse.totalItems}</p>
+            <p><b>Status:</b> ${warehouse.status}</p>
+        `;
+        } else {
+            details.innerHTML = "<p>Warehouse not found!</p>";
+        }
+    </script>
+
+</body>
+
+</html>

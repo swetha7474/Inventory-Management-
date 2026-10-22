@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Warehouses</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
+    <link rel="stylesheet" href="C:\inventory_warehouse\css\warehouses.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <h2>INVENTORY</h2>
+
+        <nav>
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="warehouses.html" class="active">
+                Warehouses
+            </a>
+
+            <a href="stock.html">
+                Stock Management
+            </a>
+        </nav>
+
+    </aside>
+
+    <div class="main">
+
+        <h1>Warehouses</h1>
+
+        <p>View all warehouses and their details.</p>
+        <div class="chart-container">
+            <canvas id="myChart" style="width:350%;max-width:350px"></canvas>
+        </div>
+
+        <div class="table-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Warehouse Name</th>
+                        <th>Location</th>
+                        <th>Manager</th>
+                        <th>Total Items</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>WH001</td>
+                        <td>Main Warehouse</td>
+                        <td>Chennai</td>
+                        <td>Anand</td>
+                        <td>47</td>
+                        <td><a href="C:\inventory_warehouse\views\warehouse_view.html?id=WH001">View</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>WH002</td>
+                        <td>Central Warehouse</td>
+                        <td>Coimbatore</td>
+                        <td>Santhosh</td>
+                        <td>28</td>
+                        <td><a href="C:\inventory_warehouse\views\warehouse_view.html?id=WH002">View</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>WH003</td>
+                        <td>South Warehouse</td>
+                        <td>Trichy</td>
+                        <td>Velu</td>
+                        <td>23</td>
+                        <td><a href="C:\inventory_warehouse\views\warehouse_view.html?id=WH003">View</a></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+
+</body>
+<script src="C:\inventory_warehouse\js\warehouse.js"></script>
+
+</html>

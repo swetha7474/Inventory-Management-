@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dashboard - Inventory</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0">
+    </script>
+
+    <link rel="stylesheet" href="C:\inventory_warehouse\css\dashboard.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div>
+            <h2>INVENTORY</h2>
+        </div>
+
+        <nav>
+            <a href="dashboard.html" class="active">
+
+                Dashboard
+            </a>
+
+            <a href="products.html">
+
+                Products
+            </a>
+
+            <a href="warehouses.html">
+
+                Warehouses
+            </a>
+
+            <a href="stock.html">
+
+                Stock Management
+            </a>
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- DASHBOARD HEADING -->
+        <div class="heading">
+            <h1>Dashboard</h1>
+            <p>Overview of your inventory and warehouse activities.</p>
+        </div>
+
+
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Products</h3>
+                <p>05</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Warehouses</h3>
+                <p>03</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Stock</h3>
+                <p>98</p>
+            </div>
+
+            <div class="card warning">
+                <h3>Low Stock</h3>
+                <p>02</p>
+            </div>
+
+        </div>
+
+
+        <!-- BOTTOM SECTION -->
+        <div class="bottom">
+
+            <div class="box">
+                <h2>Stock Overview</h2>
+                <canvas id="myChart" style="width:100%;max-width:700px">
+                </canvas>
+
+                <div class="box">
+
+                    <h2>Recent Activity</h2>
+
+                    <p>Stock updated - Laptop (30 units)</p>
+
+                    <p>Stock updated - Keyboard (18 units)</p>
+
+                    <p>Low stock - Monitor (10 units)</p>
+
+                    <p>Low stock - Printer (5 units)</p>
+
+                </div>
+
+            </div>
+
+    </main>
+
+</body>
+<script src="C:\inventory_warehouse\js\dashboard.js"></script>
+
+</html>

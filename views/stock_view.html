@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stock Details</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fa;
+            margin: 0;
+        }
+
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background: #14213d;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            color: white;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 12px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 7px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .sidebar a:hover,
+        .sidebar .active {
+            background: #315b9b;
+        }
+
+        .main {
+            margin-left: 250px;
+            padding: 30px;
+        }
+
+        .details {
+            background: rgb(161, 190, 236);
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 550px;
+        }
+
+        .details p {
+            padding: 10px;
+        }
+
+        .back {
+            color: #315b9b;
+            text-decoration: none;
+        }
+
+        .available {
+            color: green;
+        }
+
+        .low {
+            color: #d97706;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>INVENTORY</h2>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="products.html">Products</a>
+        <a href="warehouses.html">Warehouses</a>
+        <a href="stock.html" class="active">Stock Management</a>
+    </div>
+
+    <div class="main">
+
+        <h1>Stock Details</h1>
+
+        <div class="details" id="stockDetails"></div>
+
+        <br>
+
+        <a href="C:\inventory_warehouse\html\stock.html" class="back">
+            ← Back to Stock Management
+        </a>
+
+    </div>
+
+    <script>
+        const stocks = {
+            ST001: {
+                product: "Laptop",
+                warehouse: "Main Warehouse",
+                stockIn: 100,
+                stockOut: 70,
+                currentStock: 30,
+                status: "In Stock"
+            },
+
+            ST002: {
+                product: "Keyboard",
+                warehouse: "Central Warehouse",
+                stockIn: 50,
+                stockOut: 32,
+                currentStock: 18,
+                status: "In Stock"
+            },
+
+            ST003: {
+                product: "Mouse",
+                warehouse: "Main Warehouse",
+                stockIn: 80,
+                stockOut: 45,
+                currentStock: 35,
+                status: "In Stock"
+            },
+
+            ST004: {
+                product: "Monitor",
+                warehouse: "South Warehouse",
+                stockIn: 30,
+                stockOut: 20,
+                currentStock: 10,
+                status: "Low Stock"
+            },
+
+            ST005: {
+                product: "Printer",
+                warehouse: "Central Warehouse",
+                stockIn: 20,
+                stockOut: 15,
+                currentStock: 5,
+                status: "Low Stock"
+            }
+        };
+
+        const stockId =
+            new URLSearchParams(window.location.search).get("id") || "ST001";
+
+        const stock = stocks[stockId];
+
+        const details = document.getElementById("stockDetails");
+
+        if (stock) {
+            details.innerHTML = `
+            <p><b>Stock ID:</b> ${stockId}</p>
+            <p><b>Product:</b> ${stock.product}</p>
+            <p><b>Warehouse:</b> ${stock.warehouse}</p>
+            <p><b>Stock In:</b> ${stock.stockIn}</p>
+            <p><b>Stock Out:</b> ${stock.stockOut}</p>
+            <p><b>Current Stock:</b> ${stock.currentStock}</p>
+            <p><b>Status:</b>
+                <span class="${stock.status === 'In Stock' ? 'available' : 'low'}">
+                    ${stock.status}
+                </span>
+            </p>
+        `;
+        } else {
+            details.innerHTML = "<p>Stock not found!</p>";
+        }
+    </script>
+
+</body>
+
+</html>

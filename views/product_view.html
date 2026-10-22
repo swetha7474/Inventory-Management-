@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Details</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #F4F6FA;
+            margin: 0;
+        }
+
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background: #14213D;
+            padding: 20px;
+            position: fixed;
+            color: white;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 12px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 7px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .sidebar a:hover,
+        .sidebar .active {
+            background: #315B9B;
+        }
+
+        .main {
+            margin-left: 250px;
+            padding: 30px;
+        }
+
+
+        .details {
+            background: rgb(161, 190, 236);
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+        }
+
+        .details p {
+            padding: 10px;
+        }
+
+        .back {
+            color: #315b9b;
+            text-decoration: none;
+        }
+
+        .status {
+            color: green;
+        }
+
+        .low {
+            color: #d97706;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>INVENTORY</h2>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="warehouses.html">Warehouses</a>
+        <a href="stock.html">Stock Management</a>
+    </div>
+
+    <div class="main">
+
+        <h1>Product Details</h1>
+
+        <div class="details" id="productDetails"></div>
+
+        <br>
+
+        <a href="C:\inventory_warehouse\html\products.html" class="back">
+            ← Back to Products
+        </a>
+
+    </div>
+
+    <script>
+        const products = {
+            P001: {
+                name: "Laptop",
+                category: "Electronics",
+                price: "₹45,000",
+                quantity: 30,
+                status: "In Stock"
+            },
+
+            P002: {
+                name: "Keyboard",
+                category: "Accessories",
+                price: "₹1,200",
+                quantity: 18,
+                status: "In Stock"
+            },
+
+            P003: {
+                name: "Mouse",
+                category: "Accessories",
+                price: "₹700",
+                quantity: 35,
+                status: "In Stock"
+            },
+
+            P004: {
+                name: "Monitor",
+                category: "Electronics",
+                price: "₹15,000",
+                quantity: 10,
+                status: "Low Stock"
+            },
+
+            P005: {
+                name: "Printer",
+                category: "Electronics",
+                price: "₹12,000",
+                quantity: 5,
+                status: "Low Stock"
+            }
+        };
+
+        const productId =
+            new URLSearchParams(window.location.search).get("id") || "P001";
+
+        const product = products[productId];
+
+        const details = document.getElementById("productDetails");
+
+        if (product) {
+            details.innerHTML = `
+        <p><b>Product ID:</b> ${productId}</p>
+        <p><b>Product Name:</b> ${product.name}</p>
+        <p><b>Category:</b> ${product.category}</p>
+        <p><b>Price:</b> ${product.price}</p>
+        <p><b>Quantity:</b> ${product.quantity}</p>
+        <p><b>Status:</b> ${product.status}</p>
+    `;
+        } else {
+            details.innerHTML = "<p>Product not found!</p>";
+        }
+    </script>
+
+</body>
+
+</html>

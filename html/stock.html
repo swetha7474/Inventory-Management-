@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Stock Management</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
+    <link rel="stylesheet" href="C:\inventory_warehouse\css\stock.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <h2>INVENTORY</h2>
+
+        <nav>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="warehouses.html">
+                Warehouses
+            </a>
+
+            <a href="stock.html" class="active">
+                Stock Management
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <main class="main">
+
+        <div class="page-heading">
+
+            <h1>Stock Management</h1>
+
+            <p>
+                View and manage stock information across warehouses.
+            </p>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Stock</h3>
+                <p>98</p>
+            </div>
+
+            <div class="card">
+                <h3>Stock In</h3>
+                <p>280</p>
+            </div>
+
+            <div class="card">
+                <h3>Stock Out</h3>
+                <p>182</p>
+            </div>
+
+            <div class="card warning">
+                <h3>Low Stock</h3>
+                <p>02</p>
+            </div>
+
+        </div>
+        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+
+
+        <div class="box">
+
+            <h2>Stock Details</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Stock ID</th>
+                        <th>Product</th>
+                        <th>Warehouse</th>
+                        <th>Stock In</th>
+                        <th>Stock Out</th>
+                        <th>Current Stock</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>ST001</td>
+
+                        <td>Laptop</td>
+
+                        <td>Main Warehouse</td>
+
+                        <td>100</td>
+
+                        <td>70</td>
+
+                        <td>30</td>
+
+                        <td>
+                            <span class="in-stock">
+                                In Stock
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="C:\inventory_warehouse\views\stock_view.html?id=ST001">
+                                View
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>ST002</td>
+
+                        <td>Keyboard</td>
+
+                        <td>Central Warehouse</td>
+
+                        <td>50</td>
+
+                        <td>32</td>
+
+                        <td>18</td>
+
+                        <td>
+                            <span class="in-stock">
+                                In Stock
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="C:\inventory_warehouse\views\stock_view.html?id=ST002">
+                                View
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>ST003</td>
+
+                        <td>Mouse</td>
+
+                        <td>Main Warehouse</td>
+
+                        <td>80</td>
+
+                        <td>45</td>
+
+                        <td>35</td>
+
+                        <td>
+                            <span class="in-stock">
+                                In Stock
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="C:\inventory_warehouse\views\stock_view.html?id=ST003">
+                                View
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>ST004</td>
+
+                        <td>Monitor</td>
+
+                        <td>South Warehouse</td>
+
+                        <td>30</td>
+
+                        <td>20</td>
+
+                        <td>10</td>
+
+                        <td>
+                            <span class="low-stock">
+                                Low Stock
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="C:\inventory_warehouse\views\stock_view.html?id=ST004">
+                                View
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>ST005</td>
+
+                        <td>Printer</td>
+
+                        <td>Central Warehouse</td>
+
+                        <td>20</td>
+
+                        <td>15</td>
+
+                        <td>5</td>
+
+                        <td>
+                            <span class="low-stock">
+                                Low Stock
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="C:\inventory_warehouse\views\stock_view.html?id=ST005">
+                                View
+                            </a>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</body>
+<script src="C:\inventory_warehouse\js\stock.js"></script>
+
+
+</html>
