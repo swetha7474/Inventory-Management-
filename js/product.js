@@ -1,6 +1,6 @@
 const xValues = ["Laptop", "Keyboard", "Mouse", "Monitor", "Printer"];
 const yValues = [30, 18, 35, 10, 5];
-const barColors = [
+const pieColors = [
   "#b91d47",
   "#00aba9",
   "#2b5797",
@@ -15,7 +15,7 @@ new Chart(ctx, {
   data: {
     labels: xValues,
     datasets: [{
-      backgroundColor: barColors,
+      backgroundColor: pieColors,
       data: yValues
     }]
   },

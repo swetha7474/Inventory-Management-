@@ -1,6 +1,6 @@
 const xValues = ["Main Warehouse", "Central Warehouse", "South Warehouse"];
 const yValues = [47, 28, 23];
-const barColors = [
+const pieColors = [
   "#b91d47",
   "#00aba9",
   "#2b5797",
@@ -15,7 +15,7 @@ new Chart(ctx, {
   data: {
     labels: xValues,
     datasets: [{
-      backgroundColor: barColors,
+      backgroundColor: pieColors,
       data: yValues
     }]
   },
