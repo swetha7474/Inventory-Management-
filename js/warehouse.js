@@ -1,5 +1,5 @@
-const xValues = ["Laptop", "Keyboard", "Mouse", "Monitor", "Printer"];
-const yValues = [30, 18, 35, 10, 5];
+const xValues = ["Main Warehouse", "Central Warehouse", "South Warehouse"];
+const yValues = [47, 28, 23];
 const barColors = [
   "#b91d47",
   "#00aba9",
@@ -11,7 +11,7 @@ const barColors = [
 const ctx = document.getElementById('myChart');
 
 new Chart(ctx, {
-  type: "doughnut",
+  type: "pie",
   data: {
     labels: xValues,
     datasets: [{
