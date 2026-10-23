@@ -19,6 +19,7 @@ new Chart(ctx, {
       legend: { display: false },
       title: {
         display: true,
+        text:"Stock Quantity",
         font: { size: 16 }
       }
     },
