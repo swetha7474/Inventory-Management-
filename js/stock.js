@@ -9,19 +9,24 @@ new Chart(ctx, {
   data: {
     labels: xValues,
     datasets: [{
+      label: "Stock Quantity",
       backgroundColor: barColors,
       data: yValues
     }]
   },
   options: {
     indexAxis: 'y',
-    plugins: {
-      legend: { display: false },
-      title: {
-        display: true,
-        text:"Stock Quantity",
-        font: { size: 16 }
+    scales: {
+      x: {
+        ticks: {
+          color: "black"
+        }
+      },
+      y: {
+        ticks: {
+          color: "black"
+        }
       }
-    },
+    }
   }
 });

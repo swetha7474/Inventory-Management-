@@ -20,13 +20,8 @@ new Chart(ctx, {
     }]
   },
   options: {
-    plugins: {
-      legend: { display: true },
-      title: {
-        display: true,
-        text: "Stock Quantity",
-        font: { size: 16 }
-      }
+    title: {
+      text: "Stock Quantity"
     }
   }
 });
