@@ -19,9 +19,7 @@ body {
     background-image: url("file:///C:/Users/SwethaVelmurugan/Downloads/logo.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     padding: 210px 5%;
-    position: relative;
 }
 
 .hero h1 {
