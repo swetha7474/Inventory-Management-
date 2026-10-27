@@ -16,7 +16,7 @@ body {
     height: 100vh;
     width: 100%;
     box-sizing: border-box;
-    background-image: url("file:///C:/Users/SwethaVelmurugan/Downloads/logo.jpg");
+    background-image: url("./assets/logo.jpg");
     background-size: cover;
     background-position: center;
     padding: 210px 5%;
