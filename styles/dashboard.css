@@ -101,14 +101,8 @@ body {
     margin-top: 35px;
 }
 
-.box {
-    background: rgb(161, 190, 236);
-    padding: 22px;
-    border-radius: 10px;
-}
-
 .box h2 {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     color: #14213d;
 }
 
