@@ -14,7 +14,7 @@ body {
     width: 230px;
     height: 100vh;
     /*viewport height*/
-    background: #14213d;
+    background-color: #14213d;
     padding: 25px 15px;
     position: fixed;
 }
@@ -37,7 +37,7 @@ body {
 
 .sidebar a:hover,
 .sidebar a.active {
-    background: #315b9b;
+    background-color: #315b9b;
     color: white;
 }
 
@@ -72,7 +72,7 @@ body {
 }
 
 .card {
-    background: rgb(161, 190, 236);
+    background-color: rgb(161, 190, 236);
     padding: 22px;
     border-radius: 12px;
 }

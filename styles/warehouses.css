@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #f4f7fb;
+    background-color: #f4f7fb;
     color: #222;
     display: flex;
 }
@@ -15,7 +15,7 @@ body {
     position: fixed;
     width: 230px;
     height: 100vh;
-    background: #14213d;
+    background-color: #14213d;
     padding: 25px 15px;
 }
 
@@ -36,7 +36,7 @@ body {
 
 .sidebar a:hover,
 .sidebar a.active {
-    background: #315b9b;
+    background-color: #315b9b;
     color: white;
 }
 
@@ -60,7 +60,7 @@ body {
 
 
 .table-box {
-    background: white;
+    background-color: white;
     border-radius: 10px;
     border: 1px solid #e6e8eb;
 }
@@ -68,7 +68,7 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-    background: rgb(161, 190, 236);
+    background-color: rgb(161, 190, 236);
     border-radius: 8px;
 }
 
@@ -77,7 +77,7 @@ th {
     padding: 20px 25px;
     font-size: 15px;
     color: #232222;
-    background: rgb(161, 190, 236);
+    background-color: rgb(161, 190, 236);
     border-bottom: 1px solid #dddfdf;
     border-radius: 8px;
 }

@@ -6,14 +6,14 @@
 }
 
 body {
-    background: #f7f9fc;
+    background-color: #f7f9fc;
     color: black;
 }
 
 .sidebar {
     width: 230px;
     height: 100vh;
-    background: #14213d;
+    background-color: #14213d;
     padding: 25px 15px;
     position: fixed;
 }
@@ -34,11 +34,11 @@ body {
 }
 
 .sidebar nav a:hover {
-    background: #315b9b;
+    background-color: #315b9b;
 }
 
 .sidebar nav a.active {
-    background: #315b9b;
+    background-color: #315b9b;
 }
 
 .main {
@@ -63,7 +63,7 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-    background: rgb(161, 190, 236);
+    background-color: rgb(161, 190, 236);
     border-radius: 8px;
 }
 
@@ -79,7 +79,7 @@ td {
 th {
     color: #1c1b1b;
     font-size: 13px;
-    background: rgb(161, 190, 236);
+    background-color: rgb(161, 190, 236);
 }
 
 td {
@@ -96,12 +96,12 @@ td {
 }
 
 .available {
-    background: #e8f8ee;
+    background-color: #e8f8ee;
     color: #16a34a;
 }
 
 .low {
-    background: #fff4d6;
+    background-color: #fff4d6;
     color: #d97706;
 }
 
