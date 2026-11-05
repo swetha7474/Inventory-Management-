@@ -51,7 +51,6 @@
             padding: 20px;
             border-radius: 8px;
             width: 500px;
-            float: left;
         }
 
         .details p {
@@ -71,6 +70,12 @@
         .low {
             color: #d97706;
         }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     </style>
 </head>
 
@@ -88,15 +93,15 @@
     <div class="main">
 
         <h1>Stock Details</h1>
-
-        <div class="details" id="stockDetails"></div>
-
-        <br>
-
         <a href="../pages/stock.html" class="back">
             &larr; Back to Stock Management
         </a>
+        <br><br>
+        <div class="main-content">
 
+            <div class="details" id="stockDetails"></div>
+
+        </div>
     </div>
 
     <script>

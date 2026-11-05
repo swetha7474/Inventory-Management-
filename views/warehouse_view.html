@@ -61,6 +61,12 @@
             text-decoration: none;
             float: right;
         }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     </style>
 </head>
 
@@ -78,15 +84,19 @@
     <div class="main">
 
         <h1>Warehouse Details</h1>
-
-        <div class="details" id="warehouseDetails"></div>
-
-        <br>
-
         <a href="../pages/warehouses.html" class="back">
             &larr; Back to Warehouses
         </a>
+        <br><br>
+        <div class="main-content">
 
+            <div class="details" id="warehouseDetails"></div>
+
+            <br>
+
+
+
+        </div>
     </div>
 
     <script>

@@ -71,6 +71,10 @@ body {
     gap: 50px;
 }
 
+.card a {
+    text-decoration: none;
+}
+
 .card {
     background-color: rgb(161, 190, 236);
     padding: 22px;

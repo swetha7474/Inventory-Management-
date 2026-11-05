@@ -50,7 +50,6 @@
             padding: 20px;
             border-radius: 8px;
             width: 500px;
-            float: left;
         }
 
         .details p {
@@ -70,6 +69,12 @@
         .low {
             color: #d97706;
         }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     </style>
 </head>
 
@@ -85,17 +90,17 @@
     </div>
 
     <div class="main">
-
         <h1>Product Details</h1>
-
-        <div class="details" id="productDetails"></div>
-
-        <br>
-
         <a href="../pages/products.html" class="back">
             &larr; Back to Products
         </a>
+        <br><br>
+        <div class="main-content">
 
+
+            <div class="details" id="productDetails"></div>
+
+        </div>
     </div>
 
     <script>
