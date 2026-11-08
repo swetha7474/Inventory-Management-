@@ -14,8 +14,6 @@ body {
 
 .hero {
     height: 100vh;
-    width: 100%;
-    box-sizing: border-box;
     background-image: url("./assets/logo.jpg");
     background-size: cover;
     background-position: center;
@@ -30,10 +28,6 @@ body {
 .hero p {
     margin: 20px 0;
     color: grey;
-}
-
-.btn {
-    background-color: #b95e38;
 }
 
 a {

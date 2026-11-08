@@ -152,20 +152,6 @@ td {
     font-size: 12px;
 }
 
-.out-stock {
-    background-color: #feecec;
-    color: #dc2626;
-    padding: 6px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-}
-
-
-.view-btn {
-    color: #1769d1;
-    font-weight: bold;
-}
-
 a {
     text-decoration: none;
 }
